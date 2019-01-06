@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { AboutBlurb } from "../components/AboutBlurb";
 import { H2 } from "../components/H2";
 import { graphql } from "gatsby";
+import { Link } from "../components/Link";
 
 interface IEdge {
   node: {
@@ -42,30 +43,46 @@ export default ({ data }: IIndexProps) => (
       `}
     >
       Latest Photos
-      <div
-        css={`
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-gap: 1rem;
-          margin-top: 2rem;
-
-          @media (max-width: 32rem) {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        `}
-      >
-        {data.allContentfulPhotoPost.edges.map(photo => (
-          <img
-            alt={photo.node.photo.title}
-            src={photo.node.photo.file.url}
-            css={`
-              border-radius: 0.5rem;
-              width: 100%;
-            `}
-          />
-        ))}
-      </div>
     </H2>
+
+    <div
+      css={`
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        margin-top: 2rem;
+
+        @media (max-width: 32rem) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      `}
+    >
+      {data.allContentfulPhotoPost.edges.map(photo => (
+        <img
+          alt={photo.node.photo.title}
+          src={photo.node.photo.file.url}
+          css={`
+            border-radius: 0.5rem;
+            width: 100%;
+          `}
+        />
+      ))}
+    </div>
+
+    <Link
+      to="/photos"
+      css={`
+        display: inline-block;
+        margin-top: 1rem;
+        transition: transform 0.25s ease;
+
+        &:hover {
+          transform: translateX(0.25rem);
+        }
+      `}
+    >
+      View More &rarr;
+    </Link>
   </Layout>
 );
 

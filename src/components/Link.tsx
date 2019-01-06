@@ -18,20 +18,21 @@ const linkStyles = `
 
 interface ILinkProps {
   children: ReactNode;
+  className?: string;
   to: string;
 }
 
-export const Link = ({ children, to }: ILinkProps) => {
+export const Link = ({ children, className, to }: ILinkProps) => {
   if (to.includes("http")) {
     return (
-      <a css={linkStyles} href={to}>
+      <a className={className} css={linkStyles} href={to}>
         {children}
       </a>
     );
   }
 
   return (
-    <GatsbyLink css={linkStyles} to={to}>
+    <GatsbyLink className={className} css={linkStyles} to={to}>
       {children}
     </GatsbyLink>
   );

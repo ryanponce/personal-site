@@ -1,27 +1,25 @@
 import React, { ReactNode } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { Header } from "./Header";
-import { ITheme } from "../theme";
 import styled, { ThemeProvider } from "../styled-components";
+import { theme } from "../theme";
+import { Footer } from "./Footer";
 
 const Container = styled.div`
   background: ${({ theme }) => theme.colors.background};
-  /* margin: 0 auto; */
+  color: ${({ theme }) => theme.colors.body};
+  margin: 0 auto;
   max-width: 50rem;
-  padding: 1rem;
-`;
+  padding: 2rem 1rem;
 
-const Main = styled.main`
-  margin-top: 4rem;
-`;
-
-const theme: ITheme = {
-  colors: {
-    background: "white",
-    body: "black",
-    link: "dodgerblue"
+  h2 {
+    margin-top: 1rem;
   }
-};
+
+  p {
+    margin-bottom: 1rem;
+  }
+`;
 
 interface ILayoutProps {
   children: ReactNode;
@@ -35,7 +33,15 @@ export default ({ children }: ILayoutProps) => (
       <Container>
         <Header />
 
-        <Main>{children}</Main>
+        <main
+          css={`
+            margin-top: 3rem;
+          `}
+        >
+          {children}
+        </main>
+
+        <Footer />
       </Container>
     </ThemeProvider>
   </>

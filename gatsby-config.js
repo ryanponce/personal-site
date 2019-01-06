@@ -22,6 +22,14 @@ module.exports = {
         spaceId: `fhhhkgles16k`,
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
       }
-    }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/legal`,
+        name: "legal"
+      }
+    },
+    `gatsby-transformer-remark`
   ]
 };

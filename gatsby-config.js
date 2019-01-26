@@ -17,10 +17,13 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-contentful`,
+      resolve: `gatsby-source-cloudinary`,
       options: {
-        spaceId: `fhhhkgles16k`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        cloudName: process.env.CLOUD_NAME,
+        apiKey: process.env.API_KEY,
+        apiSecret: process.env.API_SECRET,
+        resourceType: "image",
+        prefix: `personal-site/`
       }
     },
     `gatsby-transformer-remark`

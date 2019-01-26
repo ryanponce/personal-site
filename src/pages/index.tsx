@@ -1,25 +1,24 @@
-import React from "react";
+import React, { version } from "react";
 import Layout from "../components/Layout";
 import { AboutBlurb } from "../components/AboutBlurb";
 import { H2 } from "../components/H2";
 import { graphql } from "gatsby";
 import { Link } from "../components/Link";
 
+const BASE_IMAGE_URL = `http://res.cloudinary.com/ryanponce/image/upload/t_media_lib_thumb`;
+
 interface IEdge {
   node: {
+    format: string;
     id: string;
-    photo: {
-      file: {
-        url: string;
-      };
-      title: string;
-    };
+    public_id: string;
+    version: number;
   };
 }
 
 interface IIndexProps {
   data: {
-    allContentfulPhotoPost: {
+    allCloudinaryMedia: {
       edges: IEdge[];
     };
   };
@@ -57,10 +56,12 @@ export default ({ data }: IIndexProps) => (
         }
       `}
     >
-      {data.allContentfulPhotoPost.edges.map(photo => (
+      {data.allCloudinaryMedia.edges.map(photo => (
         <img
-          alt={photo.node.photo.title}
-          src={photo.node.photo.file.url}
+          key={photo.node.id}
+          src={`${BASE_IMAGE_URL}/v${photo.node.version}/${
+            photo.node.public_id
+          }.${photo.node.format}`}
           css={`
             border-radius: 0.5rem;
             width: 100%;
@@ -88,16 +89,13 @@ export default ({ data }: IIndexProps) => (
 
 export const query = graphql`
   query {
-    allContentfulPhotoPost(limit: 9) {
+    allCloudinaryMedia(limit: 6) {
       edges {
         node {
+          format
           id
-          photo {
-            file {
-              url
-            }
-            title
-          }
+          public_id
+          version
         }
       }
     }

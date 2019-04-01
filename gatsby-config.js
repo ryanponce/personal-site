@@ -15,17 +15,6 @@ module.exports = {
       options: {
         displayName: true
       }
-    },
-    {
-      resolve: `gatsby-source-cloudinary`,
-      options: {
-        cloudName: process.env.CLOUD_NAME,
-        apiKey: process.env.API_KEY,
-        apiSecret: process.env.API_SECRET,
-        resourceType: "image",
-        prefix: `personal-site/`
-      }
-    },
-    `gatsby-transformer-remark`
+    }
   ]
 };

@@ -1,48 +1,45 @@
-import React, { ReactNode } from "react";
-import { GlobalStyle } from "./GlobalStyle";
-import { Header } from "./Header";
-import styled, { ThemeProvider } from "../styled-components";
-import { theme } from "../theme";
-import { Footer } from "./Footer";
+import React, { ReactNode } from "react"
+import { StaticQuery, graphql } from "gatsby"
 
-const Container = styled.div`
-  background: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.body};
-  margin: 0 auto;
-  max-width: 50rem;
-  padding: 2rem 1rem;
+import Header from "./header"
+import "./layout.css"
 
-  h2 {
-    margin-top: 1rem;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-`;
-
-interface ILayoutProps {
-  children: ReactNode;
+interface LayoutProps {
+  children: ReactNode
 }
 
-export default ({ children }: ILayoutProps) => (
-  <>
-    <GlobalStyle />
-
-    <ThemeProvider theme={theme}>
-      <Container>
-        <Header />
-
-        <main
-          css={`
-            margin-top: 3rem;
-          `}
+const Layout = ({ children }: LayoutProps) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div
+          style={{
+            margin: `0 auto`,
+            maxWidth: 960,
+            padding: `0px 1.0875rem 1.45rem`,
+            paddingTop: 0,
+          }}
         >
-          {children}
-        </main>
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </div>
+      </>
+    )}
+  />
+)
 
-        <Footer />
-      </Container>
-    </ThemeProvider>
-  </>
-);
+export default Layout

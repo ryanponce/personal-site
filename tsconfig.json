@@ -1,8 +1,13 @@
 {
   "compilerOptions": {
-    "strict": true,
-    "jsx": "react",
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "preserve",
     "lib": ["dom", "esnext"],
-    "allowSyntheticDefaultImports": true
-  }
+    "strict": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true
+  },
+  "exclude": ["node_modules", "public", ".cache"]
 }

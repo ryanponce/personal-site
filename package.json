@@ -1,33 +1,56 @@
 {
   "name": "@ryanponce/personal-site",
   "private": true,
-  "description": "The personal website of Ryan Ponce.",
-  "version": "0.1.0",
-  "license": "MIT",
-  "scripts": {
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve"
-  },
+  "description": "Ryan Ponce's personal website.",
+  "version": "1.0.0",
+  "author": "Ryan Ponce <ryan@ponce.la>",
   "dependencies": {
-    "dotenv": "^6.2.0",
-    "gatsby": "^2.0.76",
-    "gatsby-plugin-config": "^1.0.7",
-    "gatsby-plugin-styled-components": "^3.0.4",
-    "gatsby-plugin-typescript": "^2.0.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "styled-components": "^4.1.3",
-    "styled-reset": "^1.6.4"
+    "gatsby": "^2.3.5",
+    "gatsby-image": "^2.0.37",
+    "gatsby-plugin-manifest": "^2.0.26",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.11",
+    "gatsby-plugin-sharp": "^2.0.32",
+    "gatsby-plugin-typescript": "^2.0.12",
+    "gatsby-source-filesystem": "^2.0.28",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "@types/node": "^10.12.18",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
-    "@types/styled-components": "^4.1.4",
-    "tslint": "^5.12.0",
-    "tslint-config-prettier": "^1.17.0",
-    "tslint-react": "^3.6.0"
+    "@types/react-helmet": "^5.0.8",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "typescript": "^3.4.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "type-check": "tsc",
+    "lint": "eslint --ignore-path .gitignore . --ext ts --ext tsx --ext js --ext jsx",
+    "lint:fix": "npm run lint --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanponce/personal-site"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanponce/personal-site/issues"
   }
 }

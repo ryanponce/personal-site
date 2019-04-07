@@ -1,30 +1,37 @@
-import React from "react";
-import { Link } from "./Link";
-import { theme } from "../theme";
+import { Link } from "gatsby"
+import React from "react"
 
-export const Header = () => (
-  <div
-    css={`
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-    `}
+interface HeaderProps {
+  siteTitle: string
+}
+
+const Header = ({ siteTitle }: HeaderProps) => (
+  <header
+    style={{
+      background: `rebeccapurple`,
+      marginBottom: `1.45rem`,
+    }}
   >
-    <div>
-      <Link to="/">
-        <h1
-          css={`
-            color: ${theme.colors.body};
-            background: ${theme.colors.gradient};
-            font-size: 2rem;
-            font-weight: 900;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          `}
+    <div
+      style={{
+        margin: `0 auto`,
+        maxWidth: 960,
+        padding: `1.45rem 1.0875rem`,
+      }}
+    >
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
         >
-          Ryan Ponce
-        </h1>
-      </Link>
+          {siteTitle}
+        </Link>
+      </h1>
     </div>
-  </div>
-);
+  </header>
+)
+
+export default Header

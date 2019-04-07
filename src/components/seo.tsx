@@ -1,13 +1,12 @@
-import React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react";
+import Helmet from "react-helmet";
 
 interface SEOProps {
-  description?: string
-  lang?: string
-  meta?: []
-  keywords?: string[]
-  title: string
+  description?: string;
+  lang?: string;
+  meta?: [];
+  keywords?: string[];
+  title: string;
 }
 
 function SEO({
@@ -15,76 +14,46 @@ function SEO({
   lang = "en",
   meta = [],
   keywords = [],
-  title,
+  title
 }: SEOProps) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || "Ryan Ponce's personal website.";
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | Ryan Ponce`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:title`,
-          content: title,
+          content: title
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: metaDescription
         },
         {
           property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
+          content: `website`
+        }
       ]
         .concat(
           keywords.length > 0
             ? {
                 name: `keywords`,
-                content: keywords.join(`, `),
+                content: keywords.join(`, `)
               }
             : []
         )
         .concat(meta)}
     />
-  )
+  );
 }
 
-export default SEO
+export default SEO;

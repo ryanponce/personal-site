@@ -1,21 +1,38 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { Link } from "gatsby";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+    <SEO title="Home" keywords={[`blog`, `ryanponce`, `personal website`]} />
+    <p>👋 Hi, I&#39;m Ryan! Thanks for stopping by.</p>
+    <p>
+      I&#39;m a software engineer living in Los Angeles. I work on the frontend
+      team at <a href="https://say.com">Say</a>.
+    </p>
 
-export default IndexPage
+    <h2>Links</h2>
+
+    <ul>
+      <li>
+        <Link to="/">Blog</Link>
+      </li>
+      <li>
+        <Link to="/">Photos</Link>
+      </li>
+      <li>
+        <Link to="/">Walks</Link>
+      </li>
+      <li>
+        <Link to="/">About Me</Link>
+      </li>
+      <li>
+        <Link to="/">Contact</Link>
+      </li>
+    </ul>
+  </Layout>
+);
+
+export default IndexPage;

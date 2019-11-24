@@ -1,61 +1,16 @@
 {
   "name": "personal-site",
-  "author": "Ryan Ponce <ryan@ponce.la>",
-  "private": true,
-  "description": "Ryan Ponce's personal website and blog.",
+  "description": "Ryan Ponce's personal website.",
   "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ryanponce/personal-site.git",
+  "author": "Ryan Ponce <ryan@ponce.la>",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "lint": "eslint --ignore-path .gitignore --ignore-pattern .eslintrc.js . --ext ts --ext tsx --ext js --ext jsx",
-    "lint:fix": "yarn lint --fix",
-    "type-check": "tsc"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "dependencies": {
-    "gatsby": "^2.15.36",
-    "gatsby-plugin-typescript": "^2.1.12",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "sanitize.css": "^11.0.0"
+    "dev": "parcel pages/**/*.html",
+    "build": "parcel pages/**/*.html"
   },
   "devDependencies": {
-    "@types/node": "^12.7.12",
-    "@types/react": "^16.9.5",
-    "@types/react-dom": "^16.9.1",
-    "@types/styled-components": "^4.1.19",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
-    "babel-plugin-styled-components": "^1.10.6",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.1.2",
-    "gatsby-image": "^2.2.27",
-    "gatsby-plugin-sharp": "^2.2.29",
-    "gatsby-plugin-styled-components": "^3.1.9",
-    "gatsby-remark-images": "^3.1.26",
-    "gatsby-source-filesystem": "^2.1.31",
-    "gatsby-transformer-remark": "^2.6.28",
-    "gatsby-transformer-sharp": "^2.2.21",
-    "lint-staged": "^9.4.2",
-    "prettier": "^1.18.2",
-    "styled-components": "^4.4.0",
-    "typescript": "^3.6.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ryanponce/personal-site"
-  },
-  "bugs": {
-    "url": "https://github.com/ryanponce/personal-site/issues"
+    "parcel-bundler": "^1.12.4"
   }
 }

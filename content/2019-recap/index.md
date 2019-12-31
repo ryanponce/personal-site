@@ -4,7 +4,7 @@ date: "2010-12-23"
 summary: "What I did in 2019."
 ---
 
-This year was a very year for me. Here are some of the big things that happened throughout the year.
+This year was a very busy year for me. Here are some of the big things that happened throughout the year.
 
 ## January
 
@@ -20,7 +20,7 @@ Sandy flew to Los Angeles for a few days to look at potential apartments for us.
 
 ## April
 
-Sandy turned 26. We moved from Brooklyn back to Los Angeles.
+Sandy turned 26 and we celebrated at a <span style="color: dodgerblue;">Dodger</span> game. We moved from Brooklyn back to Los Angeles.
 
 ## May
 
@@ -40,7 +40,7 @@ We had to put Walter down. He was just shy of 9 years old. Rode the Hollywood Ci
 
 ## September
 
-Turned 30 years old. Celebrated it at Disneyland with Sandy. She tool to me the fancy Cathay Circle restaurant in California Adventure. My Dad told a story at the Moth on the theme of "cars". Signed back up for WOW Classic with Timmy. Went to Benihanna for my cousin Drew's 13th birthday.
+Turned 30 years old. Celebrated at Disneyland with Sandy. She took to me the fancy [Carthay Circle](https://disneyland.disney.go.com/dining/disney-california-adventure/carthay-circle-restaurant/) restaurant in California Adventure. My Dad told a story at the Moth on the theme of "cars". Signed back up for WOW Classic with Timmy. Went to Benihanna for my cousin Drew's 13th birthday.
 
 ## October
 

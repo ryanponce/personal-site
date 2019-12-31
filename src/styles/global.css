@@ -47,7 +47,7 @@ p {
 }
 
 a {
-  color: lightcoral;
+  color: lightsalmon;
   text-decoration: none;
 }
 
@@ -78,10 +78,5 @@ footer {
   html {
     background-color: var(--background-dark);
     color: var(--text-dark);
-  }
-
-  a {
-    color: coral;
-    text-decoration: none;
   }
 }

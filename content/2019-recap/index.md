@@ -23,7 +23,7 @@ Sandy turned 26. We moved from Brooklyn back to Los Angeles.
 
 ## May
 
-Settled back in to Los Angeles living. Immediately hit up our classic go to spots (Bernadettes, DTLA Ramen, OB Bear, Apple Pan) and finally went to Salazar. The food was great, but the service was terrible. Will probably go back though.
+Settled back in to Los Angeles living. Immediately hit up our classic go to spots (Bernadettes, DTLA Ramen, OB Bear, Apple Pan) and finally went to [Salazar](https://salazarla.com). The food was great, but the service was terrible. Will probably go back though.
 
 ## June
 

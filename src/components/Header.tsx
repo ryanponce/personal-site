@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const Header = () => (
   <header>
-    <p className="site-title">Ponce.la</p>
+    <p>
+      <Link to="/">Ponce.la</Link>
+    </p>
   </header>
 );
 

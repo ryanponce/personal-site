@@ -4,7 +4,6 @@
   --text: black;
 
   /* dark */
-
   --background-dark: black;
   --text-dark: white;
 }
@@ -19,18 +18,60 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 40rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  line-height: 1.5;
+  margin-top: 2rem;
 }
 
-a {
-  color: var(--text);
-  text-decoration: underline wavy lightgreen;
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
   line-height: 1.75;
+  margin-top: 1rem;
+}
+
+a {
+  color: lightcoral;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.post-html {
+  margin-top: 4rem;
+}
+
+footer {
+  margin-top: 4rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -40,6 +81,7 @@ p {
   }
 
   a {
-    color: var(--text-dark);
+    color: coral;
+    text-decoration: none;
   }
 }

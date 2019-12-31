@@ -9,7 +9,11 @@ const BlogPostTemplate = ({ data }: { data: any }) => {
     <Layout>
       <article>
         <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <span>{post.frontmatter.date}</span>
+        <div
+          className="post-html"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </article>
     </Layout>
   );
@@ -23,6 +27,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
     }
   }

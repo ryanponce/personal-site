@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Layout } from "../components/Layout";
 
 const Index = ({ data }: { data: any }) => {
@@ -7,18 +7,26 @@ const Index = ({ data }: { data: any }) => {
 
   return (
     <Layout>
-      {posts.map((node: any) => (
-        <article key={node.id}>
-          <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-        </article>
-      ))}
+      {posts.map((node: any) => {
+        const post = node.node;
+
+        return (
+          <article key={post.id}>
+            <h2>
+              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+            </h2>
+            <span>{post.frontmatter.date}</span>
+            <p dangerouslySetInnerHTML={{ __html: post.frontmatter.summary }} />
+          </article>
+        );
+      })}
     </Layout>
   );
 };
 
 export default Index;
 
-export const pageQuery = graphql`
+export const query = graphql`
   {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
@@ -26,11 +34,11 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          timeToRead
-          excerpt
+          id
           frontmatter {
-            date
+            date(formatString: "MMMM DD, YYYY")
             title
+            summary
           }
         }
       }

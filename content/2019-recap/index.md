@@ -1,6 +1,7 @@
 ---
 title: 2019 Recap
 date: "2010-12-23"
+summary: "What I did in 2019."
 ---
 
 This year was a very year for me. Here are some of the big things that happened throughout the year.

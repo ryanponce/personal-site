@@ -23,3 +23,14 @@ h5,
 h6 {
   color: var(--headline);
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 48rem;
+}
+
+.site-title {
+  color: var(--headline);
+  font-size: 2rem;
+  font-weight: 600;
+}

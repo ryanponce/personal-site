@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => (
   <header>
-    <p>Ryan Ponce</p>
+    <p className="site-title">Ponce.la</p>
   </header>
 );
 

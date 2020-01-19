@@ -1,11 +1,6 @@
 :root {
-  /* light */
-  --background: white;
+  --background: #fff5d1;
   --text: black;
-
-  /* dark */
-  --background-dark: black;
-  --text-dark: white;
 }
 
 html {
@@ -47,8 +42,7 @@ p {
 }
 
 a {
-  color: lightsalmon;
-  text-decoration: none;
+  color: var(--text);
 }
 
 main {
@@ -72,11 +66,4 @@ main {
 
 footer {
   margin-top: 4rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-  }
 }

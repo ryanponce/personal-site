@@ -1,0 +1,13 @@
+body {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.nav-link {
+  padding-right: 8px;
+}

@@ -43,7 +43,7 @@ body {
   padding: 0 16px;
   max-width: 600px;
   margin: 0 auto;
-  color: orange;
+  background: orange;
 }
 .nav-links {
   list-style: none;

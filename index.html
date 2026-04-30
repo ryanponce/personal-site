@@ -38,7 +38,10 @@
       </article>
     </main>
     <footer>
-      <p>&copy; 2024</p>
+      <p>&copy; <span id="year"></span></p>
     </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

@@ -49,7 +49,7 @@
       <p>&copy; {{ now() | date(format="%Y") }}</p>
     </footer>
     <script>
-      for (const a of document.querySelectorAll("main a, footer a")) {
+      for (const a of document.querySelectorAll("header p a, main a, footer a")) {
         if (a.querySelector("img")) continue; // don't decorate image links
         const href = a.getAttribute("href") || "";
         const inner = a.innerHTML;

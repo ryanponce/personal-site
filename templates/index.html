@@ -11,9 +11,9 @@
     {% set photos_section = get_section(path="photos/_index.md") %}
     <div class="photo-grid">
       {% for page in photos_section.pages | slice(end=9) %}
-        {% set thumb = page.extra.photo | replace(from=".jpg", to=".thumb.webp") | replace(from=".jpeg", to=".thumb.webp") | replace(from=".png", to=".thumb.webp") %}
+        {% set thumb = resize_image(path=page.extra.photo | trim_start_matches(pat="/"), width=600, height=600, op="fill", format="webp", quality=80) %}
         <a class="photo-tile" href="{{ page.path | safe }}">
-          <img src="{{ thumb | safe }}" onerror="this.onerror=null;this.src='{{ page.extra.photo | safe }}'" alt="{{ page.title }}" loading="lazy" decoding="async" />
+          <img src="{{ thumb.url | replace(from=config.base_url, to='') | safe }}" alt="{{ page.title }}" loading="lazy" decoding="async" />
         </a>
       {% endfor %}
     </div>

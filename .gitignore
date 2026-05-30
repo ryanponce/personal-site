@@ -1,5 +1,5 @@
 .DS_Store
 public/
 
-# Generated image thumbnails (built in CI)
-*.thumb.webp
+# Zola's resize_image() output cache
+static/processed_images/

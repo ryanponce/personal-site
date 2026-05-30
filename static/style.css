@@ -194,12 +194,6 @@ body > footer {
   margin-block: 1lh;
 }
 
-@media (width < 480px) {
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .photo-tile {
   display: block;
   aspect-ratio: 1 / 1;

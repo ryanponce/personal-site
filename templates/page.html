@@ -2,8 +2,6 @@
 
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock title %}
 
-{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
-
 {% block back %}<p><a href="/">← Back to Home</a></p>{% endblock back %}
 
 {% block content %}

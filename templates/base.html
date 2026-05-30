@@ -3,10 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {%- set meta_desc = config.description %}
+    {%- set meta_title = config.title %}
+    {%- set meta_url = config.base_url %}
+    {%- set og_src = "/images/honeymoon/88420004.jpg" %}
+    {%- if page is defined %}
+      {%- set meta_desc = page.description | default(value=config.description) %}
+      {%- set meta_title = page.title %}
+      {%- set meta_url = page.permalink %}
+      {%- if page.extra.photo is defined %}{% set og_src = page.extra.photo %}{% endif %}
+    {%- elif section is defined and section.title and section.title != "Home" %}
+      {%- set meta_desc = section.description | default(value=config.description) %}
+      {%- set meta_title = section.title %}
+      {%- set meta_url = section.permalink %}
+    {%- endif %}
+    {%- set og = resize_image(path=og_src | trim_start_matches(pat="/"), width=1200, height=630, op="fill", format="jpg", quality=80) %}
+
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
+    <meta name="description" content="{{ meta_desc }}" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:title" content="{{ meta_title }}" />
+    <meta property="og:description" content="{{ meta_desc }}" />
+    <meta property="og:url" content="{{ meta_url }}" />
+    <meta property="og:image" content="{{ og.url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ meta_title }}" />
+    <meta name="twitter:description" content="{{ meta_desc }}" />
+    <meta name="twitter:image" content="{{ og.url }}" />
+
     <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) | replace(from=config.base_url, to='') | safe }}" />
-    {% if config.generate_feeds %}<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') | replace(from=config.base_url, to='') | safe }}" />{% endif %}
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='posts/atom.xml') | replace(from=config.base_url, to='') | safe }}" />
   </head>
   <body>
     <header>

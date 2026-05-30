@@ -5,7 +5,6 @@ author = "Ryan Ponce"
 
 compile_sass = false
 minify_html = true
-generate_feeds = true
 
 [markdown]
 lazy_async_image = true

@@ -10,7 +10,7 @@
     <h2>Photos</h2>
     {% set photos_section = get_section(path="photos/_index.md") %}
     <div class="photo-grid">
-      {% for page in photos_section.pages | slice(end=20) %}
+      {% for page in photos_section.pages | slice(end=9) %}
         <a class="photo-tile" href="{{ page.path | safe }}">
           <img src="{{ page.extra.photo }}" alt="{{ page.title }}" loading="lazy" decoding="async" />
         </a>

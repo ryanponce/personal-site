@@ -7,6 +7,18 @@
     {{ section.content | safe }}
   </article>
   <article>
+    <h2>Photos</h2>
+    {% set photos_section = get_section(path="photos/_index.md") %}
+    <div class="photo-grid">
+      {% for page in photos_section.pages | slice(end=20) %}
+        <a class="photo-tile" href="{{ page.path | safe }}">
+          <img src="{{ page.extra.photo }}" alt="{{ page.title }}" loading="lazy" decoding="async" />
+        </a>
+      {% endfor %}
+    </div>
+    <p><a href="/photos/">View more →</a></p>
+  </article>
+  <article>
     <h2>Posts</h2>
     <ul>
       {% set posts_section = get_section(path="posts/_index.md") %}

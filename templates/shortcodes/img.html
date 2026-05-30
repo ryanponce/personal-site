@@ -1,0 +1,2 @@
+{% set image = resize_image(path=src | trim_start_matches(pat="/"), width=1200, height=1200, op="fit", format="webp", quality=80) %}
+<img src="{{ image.url | replace(from=config.base_url, to='') | safe }}" alt="{{ alt | default(value='') }}" loading="lazy" decoding="async" />

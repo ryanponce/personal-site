@@ -1,13 +1,11 @@
 base_url = "https://ryanponce.com"
 title = "Ryan Ponce"
 description = "Ryan Ponce's personal website"
+author = "Ryan Ponce"
 
 compile_sass = false
-build_search_index = false
-
-taxonomies = []
+minify_html = true
+generate_feeds = true
 
 [markdown]
 lazy_async_image = true
-
-[extra]

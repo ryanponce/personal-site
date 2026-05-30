@@ -7,5 +7,5 @@ template = "index.html"
 
 ## Pages
 
-- [About Me](/about-me/)
-- [Contact Me](/contact-me/)
+- [About Me](@/about-me.md)
+- [Contact Me](@/contact-me.md)

@@ -45,26 +45,26 @@ Sandy and I went to Maui, Hawaii for our honeymoon. We stayed at the Westin in K
 - Scraped our rental car
 - Chilled hard
 
-![ryan chillin' at the westin](/images/honeymoon/88410010.jpg)
-![sandy chillin by the pool](/images/honeymoon/88410011.jpg)
-![ryan sitting by the beach drinking a tiki drink](/images/honeymoon/88410017.jpg)
-![coral](/images/honeymoon/88410021.jpg)
-![ryan giving a shaka underwater](/images/honeymoon/88410023.jpg)
-![ryan snorkeling](/images/honeymoon/88410024.jpg)
-![sandy snorkeling in front of the trilogy boat](/images/honeymoon/88410026.jpg)
-![westin kaanapali with ocean in background](/images/honeymoon/88420004.jpg)
-![westin pool](/images/honeymoon/88420005.jpg)
-![westin with pool below and ocean in background](/images/honeymoon/88420006.jpg)
-![ryan selfie holding nikon f100](/images/honeymoon/88420007.jpg)
-![ryan portrait with sunglasses on at monkeypod kitchen](/images/honeymoon/88420008.jpg)
-![shave ice store in lahaina at night](/images/honeymoon/88420013.jpg)
-![ululani's shaved ice sign at night](/images/honeymoon/88420014.jpg)
-![sandy holding shaved ice](/images/honeymoon/88420015.jpg)
-![cotton candy and bubblegum shaved ice](/images/honeymoon/88420016.jpg)
-![sandy in front of flowers at westin lobbby](/images/honeymoon/88420017.jpg)
-![plants](/images/honeymoon/88420018.jpg)
-![sandy in lahaina on front st.](/images/honeymoon/88420020.jpg)
-![shaved ice](/images/honeymoon/88420023.jpg)
-![sandy eating mcdonalds apple pie](/images/honeymoon/88420026.jpg)
-![ryan in driver's seat of rental car](/images/honeymoon/88420030.jpg)
-![sandy in front of mama's fish hose sign](/images/honeymoon/88420036.jpg)
+{{ img(src="/images/honeymoon/88410010.jpg", alt="ryan chillin' at the westin") }}
+{{ img(src="/images/honeymoon/88410011.jpg", alt="sandy chillin by the pool") }}
+{{ img(src="/images/honeymoon/88410017.jpg", alt="ryan sitting by the beach drinking a tiki drink") }}
+{{ img(src="/images/honeymoon/88410021.jpg", alt="coral") }}
+{{ img(src="/images/honeymoon/88410023.jpg", alt="ryan giving a shaka underwater") }}
+{{ img(src="/images/honeymoon/88410024.jpg", alt="ryan snorkeling") }}
+{{ img(src="/images/honeymoon/88410026.jpg", alt="sandy snorkeling in front of the trilogy boat") }}
+{{ img(src="/images/honeymoon/88420004.jpg", alt="westin kaanapali with ocean in background") }}
+{{ img(src="/images/honeymoon/88420005.jpg", alt="westin pool") }}
+{{ img(src="/images/honeymoon/88420006.jpg", alt="westin with pool below and ocean in background") }}
+{{ img(src="/images/honeymoon/88420007.jpg", alt="ryan selfie holding nikon f100") }}
+{{ img(src="/images/honeymoon/88420008.jpg", alt="ryan portrait with sunglasses on at monkeypod kitchen") }}
+{{ img(src="/images/honeymoon/88420013.jpg", alt="shave ice store in lahaina at night") }}
+{{ img(src="/images/honeymoon/88420014.jpg", alt="ululani's shaved ice sign at night") }}
+{{ img(src="/images/honeymoon/88420015.jpg", alt="sandy holding shaved ice") }}
+{{ img(src="/images/honeymoon/88420016.jpg", alt="cotton candy and bubblegum shaved ice") }}
+{{ img(src="/images/honeymoon/88420017.jpg", alt="sandy in front of flowers at westin lobbby") }}
+{{ img(src="/images/honeymoon/88420018.jpg", alt="plants") }}
+{{ img(src="/images/honeymoon/88420020.jpg", alt="sandy in lahaina on front st.") }}
+{{ img(src="/images/honeymoon/88420023.jpg", alt="shaved ice") }}
+{{ img(src="/images/honeymoon/88420026.jpg", alt="sandy eating mcdonalds apple pie") }}
+{{ img(src="/images/honeymoon/88420030.jpg", alt="ryan in driver's seat of rental car") }}
+{{ img(src="/images/honeymoon/88420036.jpg", alt="sandy in front of mama's fish hose sign") }}

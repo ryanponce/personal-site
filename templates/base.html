@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}" />
     <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) | replace(from=config.base_url, to='') | safe }}" />
+    {% if config.generate_feeds %}<link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') | replace(from=config.base_url, to='') | safe }}" />{% endif %}
   </head>
   <body>
     <header>

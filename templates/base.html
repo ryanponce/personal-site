@@ -19,6 +19,7 @@
     </footer>
     <script>
       for (const a of document.querySelectorAll("main a, footer a")) {
+        if (a.querySelector("img")) continue; // don't decorate image links
         const href = a.getAttribute("href") || "";
         const inner = a.innerHTML;
         const url = document.createElement("span");

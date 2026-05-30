@@ -1,0 +1,10 @@
+base_url = "https://ryanponce.com"
+title = "Ryan Ponce"
+description = "Ryan Ponce's personal website"
+
+compile_sass = false
+build_search_index = false
+
+taxonomies = []
+
+[extra]

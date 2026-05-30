@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Home - {{ config.title }}{% endblock title %}
+
+{% block content %}
+  <article>
+    {{ section.content | safe }}
+  </article>
+  <article>
+    <h2>Posts</h2>
+    <ul>
+      {% set posts_section = get_section(path="posts/_index.md") %}
+      {% for post in posts_section.pages %}
+        <li>
+          <a href="{{ post.path | safe }}">{{ post.title }}</a> - {{ post.date | date(format="%B %-d, %Y") }}
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endblock content %}

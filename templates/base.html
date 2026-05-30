@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <link rel="stylesheet" href="{{ get_url(path='style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Ryan Ponce</a></h1>
+      {% block back %}{% endblock %}
+    </header>
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+    <footer>
+      <p>&copy; {{ now() | date(format="%Y") }}</p>
+    </footer>
+    <script>
+      for (const a of document.querySelectorAll("main a, footer a")) {
+        const href = a.getAttribute("href") || "";
+        const inner = a.innerHTML;
+        const url = document.createElement("span");
+        url.className = "url";
+        url.textContent = href;
+        a.innerHTML = "";
+        a.append("[");
+        const text = document.createElement("span");
+        text.innerHTML = inner;
+        a.append(text, "](", url, ")");
+      }
+    </script>
+  </body>
+</html>

@@ -28,6 +28,14 @@ jobs:
       - name: Build
         run: zola build
 
+      - name: Ensure Pages project exists
+        continue-on-error: true
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages project create ryanponce-com --production-branch=master
+
       - name: Publish to Cloudflare Pages
         id: pages
         uses: cloudflare/wrangler-action@v3
@@ -38,6 +46,7 @@ jobs:
             pages deploy public
             --project-name=ryanponce-com
             --branch=${{ github.head_ref || github.ref_name }}
+            --commit-dirty=true
 
       - name: Comment preview URL on PR
         if: github.event_name == 'pull_request'
